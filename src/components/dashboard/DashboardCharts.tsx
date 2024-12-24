@@ -122,7 +122,7 @@ export function DashboardCharts() {
           <CardTitle>Compliance Overview</CardTitle>
         </CardHeader>
         <CardContent>
-          <ChartContainer>
+          <ChartContainer config={{ pie: { color: "#3b82f6" } }}>
             <PieChart>
               <Pie
                 data={complianceData}
