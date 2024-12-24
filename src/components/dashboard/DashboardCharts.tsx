@@ -14,6 +14,7 @@ import {
   ResponsiveContainer,
   XAxis,
   YAxis,
+  Tooltip,
 } from "recharts"
 
 const threatData = [
@@ -57,9 +58,7 @@ export function DashboardCharts() {
                 stroke="var(--color-line)"
                 strokeWidth={2}
               />
-              <ChartTooltip>
-                <ChartTooltipContent />
-              </ChartTooltip>
+              <Tooltip content={<ChartTooltipContent />} />
             </LineChart>
           </ChartContainer>
         </CardContent>
@@ -79,9 +78,7 @@ export function DashboardCharts() {
                 fill="var(--color-bar)"
                 radius={[4, 4, 0, 0]}
               />
-              <ChartTooltip>
-                <ChartTooltipContent />
-              </ChartTooltip>
+              <Tooltip content={<ChartTooltipContent />} />
             </BarChart>
           </ChartContainer>
         </CardContent>
@@ -103,9 +100,7 @@ export function DashboardCharts() {
                 fill="var(--color-area)"
                 fillOpacity={0.2}
               />
-              <ChartTooltip>
-                <ChartTooltipContent />
-              </ChartTooltip>
+              <Tooltip content={<ChartTooltipContent />} />
             </AreaChart>
           </ChartContainer>
         </CardContent>
