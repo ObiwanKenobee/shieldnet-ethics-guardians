@@ -15,6 +15,9 @@ import {
   XAxis,
   YAxis,
   Tooltip,
+  PieChart,
+  Pie,
+  Cell,
 } from "recharts"
 
 const threatData = [
@@ -39,6 +42,14 @@ const energyData = [
   { name: "Week 3", value: 105 },
   { name: "Week 4", value: 95 },
 ]
+
+const complianceData = [
+  { name: "Compliant", value: 85 },
+  { name: "In Progress", value: 10 },
+  { name: "Non-Compliant", value: 5 },
+]
+
+const COLORS = ["#22c55e", "#3b82f6", "#ef4444"]
 
 export function DashboardCharts() {
   return (
@@ -103,6 +114,45 @@ export function DashboardCharts() {
               <Tooltip content={<ChartTooltipContent />} />
             </AreaChart>
           </ChartContainer>
+        </CardContent>
+      </Card>
+
+      <Card>
+        <CardHeader>
+          <CardTitle>Compliance Overview</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <ChartContainer>
+            <PieChart>
+              <Pie
+                data={complianceData}
+                cx="50%"
+                cy="50%"
+                innerRadius={60}
+                outerRadius={80}
+                paddingAngle={5}
+                dataKey="value"
+              >
+                {complianceData.map((entry, index) => (
+                  <Cell key={entry.name} fill={COLORS[index % COLORS.length]} />
+                ))}
+              </Pie>
+              <Tooltip content={<ChartTooltipContent />} />
+            </PieChart>
+          </ChartContainer>
+          <div className="mt-4 flex justify-center gap-4">
+            {complianceData.map((entry, index) => (
+              <div key={entry.name} className="flex items-center gap-2">
+                <div
+                  className="h-3 w-3 rounded-full"
+                  style={{ backgroundColor: COLORS[index] }}
+                />
+                <span className="text-sm text-muted-foreground">
+                  {entry.name}
+                </span>
+              </div>
+            ))}
+          </div>
         </CardContent>
       </Card>
     </div>
