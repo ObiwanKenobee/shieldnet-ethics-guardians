@@ -6,16 +6,17 @@ import {
   Sidebar,
   SidebarContent,
   SidebarGroup,
-  SidebarGroupContent,
   SidebarGroupLabel,
+  SidebarGroupContent,
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
+import { useNavigate } from "react-router-dom"
 
 const menuItems = [
   { title: "Overview", icon: BarChart3, url: "/dashboard" },
-  { title: "Threat Monitoring", icon: Shield, url: "#threats" },
+  { title: "Threat Monitoring", icon: Shield, url: "/threat-monitoring" },
   { title: "Ethics Governance", icon: ScrollText, url: "#ethics" },
   { title: "Training Environment", icon: Server, url: "#training" },
   { title: "Global Governance", icon: Globe, url: "#global" },
@@ -26,6 +27,8 @@ const menuItems = [
 ]
 
 export function DashboardSidebar() {
+  const navigate = useNavigate()
+
   return (
     <Sidebar>
       <SidebarContent>
@@ -35,11 +38,9 @@ export function DashboardSidebar() {
             <SidebarMenu>
               {menuItems.map((item) => (
                 <SidebarMenuItem key={item.title}>
-                  <SidebarMenuButton asChild>
-                    <a href={item.url}>
-                      <item.icon />
-                      <span>{item.title}</span>
-                    </a>
+                  <SidebarMenuButton onClick={() => navigate(item.url)}>
+                    <item.icon />
+                    <span>{item.title}</span>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
               ))}
