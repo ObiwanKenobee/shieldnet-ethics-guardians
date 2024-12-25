@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Index from "./pages/Index"
 import Dashboard from "./pages/Dashboard"
 import ThreatMonitoring from "./pages/ThreatMonitoring"
+import EthicsGovernance from "./pages/EthicsGovernance"
 
 const queryClient = new QueryClient()
 
@@ -19,6 +20,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/threat-monitoring" element={<ThreatMonitoring />} />
+          <Route path="/ethics-governance" element={<EthicsGovernance />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
