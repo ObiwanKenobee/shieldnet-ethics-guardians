@@ -7,6 +7,7 @@ import Index from "./pages/Index"
 import Dashboard from "./pages/Dashboard"
 import ThreatMonitoring from "./pages/ThreatMonitoring"
 import EthicsGovernance from "./pages/EthicsGovernance"
+import TrainingEnvironment from "./pages/TrainingEnvironment"
 
 const queryClient = new QueryClient()
 
@@ -21,6 +22,7 @@ const App = () => (
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/threat-monitoring" element={<ThreatMonitoring />} />
           <Route path="/ethics-governance" element={<EthicsGovernance />} />
+          <Route path="/training-environment" element={<TrainingEnvironment />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>

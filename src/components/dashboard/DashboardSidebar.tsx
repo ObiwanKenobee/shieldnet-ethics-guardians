@@ -18,7 +18,7 @@ const menuItems = [
   { title: "Overview", icon: BarChart3, url: "/dashboard" },
   { title: "Threat Monitoring", icon: Shield, url: "/threat-monitoring" },
   { title: "Ethics Governance", icon: ScrollText, url: "/ethics-governance" },
-  { title: "Training Environment", icon: Server, url: "#training" },
+  { title: "Training Environment", icon: Server, url: "/training-environment" },
   { title: "Global Governance", icon: Globe, url: "#global" },
   { title: "Environmental Impact", icon: Leaf, url: "#environment" },
   { title: "Certification Progress", icon: BadgeCheck, url: "#certification" },
