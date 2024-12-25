@@ -9,6 +9,7 @@ import ThreatMonitoring from "./pages/ThreatMonitoring"
 import EthicsGovernance from "./pages/EthicsGovernance"
 import TrainingEnvironment from "./pages/TrainingEnvironment"
 import EnvironmentalImpact from "./pages/EnvironmentalImpact"
+import GlobalGovernance from "./pages/GlobalGovernance"
 
 const queryClient = new QueryClient()
 
@@ -25,6 +26,7 @@ const App = () => (
           <Route path="/ethics-governance" element={<EthicsGovernance />} />
           <Route path="/training-environment" element={<TrainingEnvironment />} />
           <Route path="/environmental-impact" element={<EnvironmentalImpact />} />
+          <Route path="/global-governance" element={<GlobalGovernance />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
