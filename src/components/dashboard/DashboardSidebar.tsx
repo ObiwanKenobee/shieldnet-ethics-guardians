@@ -23,7 +23,7 @@ const menuItems = [
   { title: "Global Governance", icon: Globe, url: "/global-governance" },
   { title: "Certification Progress", icon: BadgeCheck, url: "/certification-progress" },
   { title: "Reports & Logs", icon: FileText, url: "/reports-and-logs" },
-  { title: "Settings", icon: Settings, url: "#settings" },
+  { title: "Settings", icon: Settings, url: "/settings" },
 ]
 
 export function DashboardSidebar() {

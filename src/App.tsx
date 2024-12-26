@@ -12,6 +12,7 @@ import EnvironmentalImpact from "./pages/EnvironmentalImpact"
 import GlobalGovernance from "./pages/GlobalGovernance"
 import CertificationProgress from "./pages/CertificationProgress"
 import ReportsAndLogs from "./pages/ReportsAndLogs"
+import Settings from "./pages/Settings"
 
 const queryClient = new QueryClient()
 
@@ -31,6 +32,7 @@ const App = () => (
           <Route path="/global-governance" element={<GlobalGovernance />} />
           <Route path="/certification-progress" element={<CertificationProgress />} />
           <Route path="/reports-and-logs" element={<ReportsAndLogs />} />
+          <Route path="/settings" element={<Settings />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
