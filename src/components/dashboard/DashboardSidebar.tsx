@@ -1,6 +1,6 @@
 import { 
   Database, Shield, Server, Globe, Leaf, BadgeCheck, 
-  Settings, BarChart3, ScrollText 
+  Settings, BarChart3, ScrollText, FileText 
 } from "lucide-react"
 import {
   Sidebar,
@@ -20,9 +20,9 @@ const menuItems = [
   { title: "Ethics Governance", icon: ScrollText, url: "/ethics-governance" },
   { title: "Training Environment", icon: Server, url: "/training-environment" },
   { title: "Environmental Impact", icon: Leaf, url: "/environmental-impact" },
-  { title: "Global Governance", icon: Globe, url: "#global" },
-  { title: "Certification Progress", icon: BadgeCheck, url: "#certification" },
-  { title: "Reports & Logs", icon: Database, url: "#reports" },
+  { title: "Global Governance", icon: Globe, url: "/global-governance" },
+  { title: "Certification Progress", icon: BadgeCheck, url: "/certification-progress" },
+  { title: "Reports & Logs", icon: FileText, url: "/reports-and-logs" },
   { title: "Settings", icon: Settings, url: "#settings" },
 ]
 
